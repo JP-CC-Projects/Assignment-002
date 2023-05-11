@@ -11,6 +11,11 @@ public class Main {
         int guessesLeft = 4;
 
         while(guessNum != randNum && guessesLeft > 0){
+            if(guessNum > 100 || guessNum < 1){
+                System.out.println("Your guess is not between 1 and 100, please try again");
+                guessNum = Integer.parseInt(sc.nextLine());
+            }
+            else {
                 if (guessNum < randNum) {
                     System.out.println("Please pick a higher number");
                 }
@@ -19,12 +24,11 @@ public class Main {
                 }
                 guessNum = Integer.parseInt(sc.nextLine());
                 guessesLeft--;
-
                 if(guessesLeft == 0){
                     System.out.println("You lose! The number was " + randNum);
                 }
+            }
         }
-
         if (guessNum == randNum){
             System.out.println("You win!");
         }
