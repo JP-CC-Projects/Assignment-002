@@ -5,7 +5,7 @@ public class Main {
 
         System.out.println("Pick a number between 1 and 100: ");
 
-        int randNum = (int)((Math.floor(Math.random()) * 100) + 1);
+        int randNum = (int) ((Math.floor(Math.random() * 100)) + 1);
         Scanner sc = new Scanner(System.in);
         int guessNum = Integer.parseInt(sc.nextLine());
         int guessesLeft = 4;
