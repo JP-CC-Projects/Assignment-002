@@ -10,7 +10,6 @@ public class Main {
         int guessNum = Integer.parseInt(sc.nextLine());
         int guessesLeft = 4;
 
-        System.out.println(randNum);
         while(guessNum != randNum && guessesLeft > 0){
             if(guessNum > 100 || guessNum < 1){
                 System.out.println("Your guess is not between 1 and 100, please try again");
